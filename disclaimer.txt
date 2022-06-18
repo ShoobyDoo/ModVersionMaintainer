@@ -1,0 +1,23 @@
+Hello. You are seeing this disclaimer because it is the first time you are running this program.
+As such, here's a few things you should know about this program right off the bat.
+
+As you know, this is a program that is setting out to maintain all your mods and their respective updates
+in a very lightweight and almost entirely autonomous manner. In order to do so however...
+
+1. This program will be connecting to an external website (curseforge) to check for mod updates.
+2. You will have the option to download said updates to your computer; hence "Mod Version Maintainer".
+
+Normally, you should be weary of any program that performs these sorts of actions because downloading 
+random files from the internet obviously isn't safe.
+
+For that reason and in this case, I have spent a lot of effort in extensively documenting the source code 
+so even if you don't understand code you can still follow along with what the program is doing.
+
+You can read in full on GitHub at: https://github.com/ShoobyDoo/ModVersionMaintainer
+
+Sorry for all that, but it's important you know what this file you have just downloaded run is doing. 
+
+If you understand and would like to continue, please just enter y or yes below. 
+If you don't, just enter n or no and the program will exit. 
+
+(You will only see this message once.)
