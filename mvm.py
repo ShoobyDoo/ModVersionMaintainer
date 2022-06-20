@@ -115,7 +115,7 @@ def process_links(mod_type, mc_version = 1.19, delay=3) -> None:
 
             # Now we just build the final mod url using all the previously processed bits and pieces and let the user know
             mod_url = f"{curseforge_url}{key_fmtd}/files"
-            print(f"Processing mod {key_fmtd}: ".ljust(RESPONSE_PADDING) + f"{Style.RESET_ALL}| {Fore.LIGHTCYAN_EX}{mod_url}{Style.RESET_ALL}")
+            print(f"Processing mod {Fore.LIGHTCYAN_EX}{key_fmtd}{Style.RESET_ALL}: ".ljust(46) + f"{Style.RESET_ALL}| {Fore.LIGHTCYAN_EX}{mod_url}{Style.RESET_ALL}")
 
             # And here we begin scraping the webpages. We give a generic user agent and let cloudscraper hopefuly bypass cloudfare.
             # Please note that during my very limited testing (ie. like a few hours) it's kind of inconsistent. Sometimes the requests will go
@@ -144,7 +144,7 @@ def process_links(mod_type, mc_version = 1.19, delay=3) -> None:
 
                     all_files.append(file_attr_dict)
 
-                print("Response: ".ljust(RESPONSE_PADDING) + f"| {Fore.LIGHTGREEN_EX}{res.status_code}: OK.".ljust(20) + f"(✓){Style.RESET_ALL}\n")
+                print("Response: ".ljust(RESPONSE_PADDING) + f"| {Fore.LIGHTGREEN_EX}{res.status_code}: OK.".ljust(RESPONSE_MESSAGE_PADDING) + f"(✓){Style.RESET_ALL}\n")
 
             elif res.status_code == 404:
                 if key_fmtd in known_outliers.keys():
@@ -201,6 +201,7 @@ def main():
             exit()
 
     # Prompt user for %appdata% roaming .minecraft/mods folder
+    # TODO: Store this in a config file and just read from it instead of asking everytime.
     yn_default = input(f"\n{Fore.LIGHTGREEN_EX}Default mods folder location: [{mods_folder}]\n{Fore.LIGHTMAGENTA_EX}Confirm? (Y)es/(N)o: {Style.RESET_ALL}")
 
     # If its not in the default location, have the user provide the absolute path
@@ -271,7 +272,7 @@ def main():
     # Process links based on game version and mod type
     process_links(mod_type)
 
-    print(f"All links resolved, successfully returned attributes for {len(all_files)} mods.")
+    print(f"All links resolved, successfully returned {len(all_files)} attributes for {len(mods)} mods.")
     # pprint(all_files, sort_dicts=False)
 
 
