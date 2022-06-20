@@ -16,8 +16,6 @@
 (!)
 (!) You can read in full on GitHub at: https://github.com/ShoobyDoo/ModVersionMaintainer
 (!)
-(!) Sorry for all that, but it's important you know what this file you have just downloaded run is doing.
-(!)
 (!) If you understand and would like to continue, please just enter y or yes below.
 (!) If you don't, just enter n or no and the program will exit.
 (!) 
