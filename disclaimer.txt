@@ -21,3 +21,4 @@
 (!) If you don't, just type 'n' or 'no' and the program will exit.
 (!) 
 (!) (You will only see this message once.)
+AGREE=YES

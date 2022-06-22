@@ -294,17 +294,17 @@ class ModVersionMaintainer:
             # Get index of current mod + 1 since zero indexed to get the mod in the list and print the mod and file name
             print(f"{self.mods.index(mod) + 1}. {mod_name.ljust(33)} | {jar_file}")
 
-            # Let user know how many total mods were parsed, then let user know that we're checking for the mod type
-            # This will be later used to determine the filter that needs to be applied when scraping the webpage for download links
-            print(f"\n{Fore.LIGHTGREEN_EX}Total mods parsed: {len(self.mods)}{Style.RESET_ALL}\n\n{Fore.LIGHTMAGENTA_EX}Determining mods type (forge/fabric)...{Style.RESET_ALL}")
+        # Let user know how many total mods were parsed, then let user know that we're checking for the mod type
+        # This will be later used to determine the filter that needs to be applied when scraping the webpage for download links
+        print(f"\n{Fore.LIGHTGREEN_EX}Total mods parsed: {len(self.mods)}{Style.RESET_ALL}\n\n{Fore.LIGHTMAGENTA_EX}Determining mods type (forge/fabric)...{Style.RESET_ALL}")
 
-            # If the mod type remained unknown, it means none of the mods gave an indication of what type they were. We need to prompt the user instead
-            if self.mod_type == "unknown":
-                self.mod_type = input(f"Unable to determine your mod type. Please provide your mod type by entering either forge or fabric.\n{Fore.LIGHTMAGENTA_EX}Mod type: {Style.RESET_ALL}")
-                print(f"{Fore.LIGHTGREEN_EX}{self.mod_type.capitalize()} selected as mod type.{Style.RESET_ALL}") if self.mod_type.lower() == "fabric" else print(f"{Fore.LIGHTGREEN_EX}{self.mod_type.capitalize()} selected as mod type.{Style.RESET_ALL}")
-            # If the mod type isn't unknown, likely forge or fabric, then we print a positive message to the user letting them know the mod type was automatically determined
-            else:
-                print(f"{Fore.LIGHTGREEN_EX}Mods containing keyword {self.mod_type.lower()} were found; {self.mod_type.lower()} selected.{Style.RESET_ALL}")
+        # If the mod type remained unknown, it means none of the mods gave an indication of what type they were. We need to prompt the user instead
+        if self.mod_type == "unknown":
+            self.mod_type = input(f"Unable to determine your mod type. Please provide your mod type by entering either forge or fabric.\n{Fore.LIGHTMAGENTA_EX}Mod type: {Style.RESET_ALL}")
+            print(f"{Fore.LIGHTGREEN_EX}{self.mod_type.capitalize()} selected as mod type.{Style.RESET_ALL}") if self.mod_type.lower() == "fabric" else print(f"{Fore.LIGHTGREEN_EX}{self.mod_type.capitalize()} selected as mod type.{Style.RESET_ALL}")
+        # If the mod type isn't unknown, likely forge or fabric, then we print a positive message to the user letting them know the mod type was automatically determined
+        else:
+            print(f"{Fore.LIGHTGREEN_EX}Mods containing keyword {self.mod_type.lower()} were found; {self.mod_type.lower()} selected.{Style.RESET_ALL}")
         
         # Let user know we are trying to determine the appropriate minecraft version
         print(f"\n{Fore.LIGHTMAGENTA_EX}Trying to automatically determine Minecraft version...\nQuerying Minecraft versions API...{Style.RESET_ALL}")
