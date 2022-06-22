@@ -1,3 +1,3 @@
 @ECHO OFF
 
-.venv\Scripts\activate.bat && py -m mvm
+.venv\Scripts\activate.bat && py -m main
