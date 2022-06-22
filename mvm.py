@@ -333,6 +333,6 @@ class ModVersionMaintainer:
         
         # TODO: FINISH UP
         if guessed_mc_version:
-            is_correct = input(f"{Fore.LIGHTGREEN_EX}Auto detection found a potential match on the Minecraft version. Is {guessed_mc_version} correct?{Fore.LIGHTMAGENTA_EX}\n(Y)es/(N)o: {Style.RESET_ALL}")
+            is_correct = input(f"{Fore.LIGHTGREEN_EX}Auto detection found a potential match on the Minecraft version.\n{Fore.LIGHTMAGENTA_EX}Is {guessed_mc_version} correct? (Y)es/(N)o: {Style.RESET_ALL}")
         else:
             is_correct = input(f"{Fore.LIGHTYELLOW_EX}Auto detection could not detect the Minecraft version.\n{Fore.LIGHTMAGENTA_EX}Please enter your desired Minecraft version: {Style.RESET_ALL}")

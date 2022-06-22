@@ -39,6 +39,7 @@ __version__ = "0.1.0"
 
 
 def main():
+    os.system(f"title Mod Version Maintainer")
     print(f"{Fore.LIGHTMAGENTA_EX}Welcome to {Fore.LIGHTCYAN_EX}Mod Version Maintainer (MVM){Fore.LIGHTMAGENTA_EX} v{__version__} - Copyright 2022 Doomlad{Style.RESET_ALL}")
 
     # TODO: rewrite this so it reads disclaimer from github repo and just creates a disclaimer.txt file with AGREE=YES in it.
